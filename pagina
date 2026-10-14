@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EJEMPLO123"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-EJEMPLO123');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usa tu Vaso Reutilizable - Starbucks</title>
+    <style>
+        :root {
+            --starbucks-green: #006241;
+            --starbucks-light-green: #d4e9e2;
+            --text-dark: #1e3932;
+            --text-light: #f2f0eb;
+            --bg-color: #ffffff;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-dark); line-height: 1.6; }
+        h1, h2, h3, p { margin-bottom: 1rem; text-align: center; }
+        
+        .btn {
+            display: inline-block; background-color: var(--starbucks-green); color: white;
+            padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold;
+            font-size: 1.1rem; text-align: center; transition: background-color 0.3s ease; border: none; cursor: pointer;
+        }
+        .btn:hover { background-color: #004a31; }
+
+        header { padding: 20px; display: flex; justify-content: center; border-bottom: 1px solid #ddd; }
+        .logo { width: 60px; height: 60px; background-color: var(--starbucks-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.8rem; text-align: center; }
+        section { padding: 60px 20px; max-width: 900px; margin: 0 auto; }
+
+        #hero { text-align: center; background-color: var(--starbucks-light-green); border-radius: 0 0 20px 20px; padding: 80px 20px; }
+        #hero h1 { font-size: 2.5rem; color: var(--starbucks-green); }
+        #hero p.propuesta { font-size: 1.3rem; font-weight: 500; margin-bottom: 30px; }
+        .hero-icon { margin: 20px auto; width: 120px; height: 120px; }
+
+        #como-funciona .pasos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+        .paso-card { background: #f9f9f9; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .paso-numero { background-color: var(--starbucks-green); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto; font-size: 1.2rem; font-weight: bold; }
+
+        #evidencia { background-color: var(--text-dark); color: white; border-radius: 12px; text-align: center; }
+        #faq details { background-color: #f9f9f9; margin-bottom: 15px; padding: 15px; border-radius: 8px; border-left: 5px solid var(--starbucks-green); }
+        #faq summary { font-weight: bold; cursor: pointer; outline: none; text-align: left; }
+        #faq details p { margin-top: 10px; margin-bottom: 0; text-align: left; }
+        #cierre { text-align: center; background-color: var(--starbucks-light-green); border-radius: 12px; }
+        footer { text-align: center; padding: 30px 20px; font-size: 0.9rem; color: #666; }
+
+        @media (max-width: 600px) { #hero h1 { font-size: 2rem; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">STAR<br>BUCKS</div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <svg class="hero-icon" aria-hidden="true" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 90C50 90 10 60 10 35C10 20 22 10 35 10C43 10 50 15 50 15C50 15 57 10 65 10C78 10 90 20 90 35C90 60 50 90 50 90Z" fill="#006241" opacity="0.1" stroke="#006241" stroke-width="4"/>
+                <circle cx="50" cy="45" r="25" fill="white" stroke="#006241" stroke-width="4"/>
+                <path d="M35 40C38 38 40 45 45 42C50 39 48 32 55 35C60 38 65 30 65 30" stroke="#006241" stroke-width="3" stroke-linecap="round"/>
+                <path d="M35 55C40 58 45 52 50 55C55 58 60 52 65 55" stroke="#006241" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <h1>Salva el planeta hoy, USA TU VASO REUTILIZABLE</h1>
+            <p class="propuesta">Ayuda al medio ambiente y obtén 15% de descuento en tu bebida favorita cada vez que traigas tu vaso.</p>
+            <a href="https://cupones.starbucks.ejemplo" id="cta-principal" class="btn" target="_blank" rel="noopener">Descarga tu cupón de descuento</a>
+        </section>
+
+        <section id="como-funciona">
+            <h2>¿Cómo funciona? Es muy simple</h2>
+            <p>Sigue estos tres pasos para disfrutar tu café y ayudar al planeta.</p>
+            <div class="pasos-grid">
+                <div class="paso-card"><div class="paso-numero">1</div><h3>Trae tu vaso limpio</h3><p>Puede ser de nuestra marca o cualquier otro vaso térmico limpio.</p></div>
+                <div class="paso-card"><div class="paso-numero">2</div><h3>Pide tu bebida</h3><p>Entrégale el vaso a tu barista al ordenar en caja.</p></div>
+                <div class="paso-card"><div class="paso-numero">3</div><h3>Disfruta tu descuento</h3><p>Se aplicará un 15% de descuento automáticamente.</p></div>
+            </div>
+        </section>
+
+        <section id="evidencia">
+            <h2>El cambio lo hacemos juntos</h2>
+            <p>Más de 250,000 vasos de un solo uso han sido ahorrados por nuestra comunidad este año. Súmate a los miles de clientes que ya están reduciendo su huella de carbono.</p>
+        </section>
+
+        <section id="faq">
+            <h2>Preguntas Frecuentes</h2>
+            <details><summary>¿Aceptan vasos que no sean de Starbucks?</summary><p>Sí, aceptamos cualquier marca de vaso reutilizable o térmico limpio.</p></details>
+            <details><summary>¿El vaso tiene que estar completamente limpio?</summary><p>Sí. Por medidas de higiene, solo podemos recibir vasos lavados desde casa.</p></details>
+            <details><summary>¿Aplica para bebidas frías y calientes?</summary><p>¡Por supuesto! Aplica para cualquier bebida preparada en barra.</p></details>
+        </section>
+
+        <section id="cierre">
+            <h2>¿Listo para hacer la diferencia?</h2>
+            <p>Empieza a usar tu vaso hoy mismo y disfruta de los beneficios.</p>
+            <a href="https://cupones.starbucks.ejemplo" class="cta-principal btn" target="_blank" rel="noopener">Descarga tu cupón de descuento</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Starbucks. Diseño optimizado para conversión.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const botonesCTA = document.querySelectorAll('#cta-principal, .cta-principal');
+            botonesCTA.forEach(function(boton) {
+                boton.addEventListener('click', function() {
+                    const seccionId = this.closest('section').id;
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'clic_cta_principal', { 'ubicacion': seccionId });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
