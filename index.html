@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EJEMPLO123"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-EJEMPLO123');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Salva el planeta hoy usando tu vaso reutilizable en Starbucks y obtén 15% de descuento en tu bebida favorita.">
+    <title>Usa tu Vaso Reutilizable - Starbucks</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --sb-green: #006241;
+            --sb-dark-green: #1e3932;
+            --sb-deep-forest: #0b2319;
+            --sb-light-green: #e9f5ef;
+            --sb-accent-gold: #cba258;
+            --sb-warm-cream: #f7f5f0;
+            --sb-soft-gray: #f4f5f6;
+            --sb-text-main: #1e3932;
+            --sb-text-muted: #596b64;
+            --sb-white: #ffffff;
+            --shadow-sm: 0 4px 12px rgba(0, 98, 65, 0.08);
+            --shadow-md: 0 12px 30px rgba(0, 98, 65, 0.12);
+            --shadow-lg: 0 20px 45px rgba(0, 0, 0, 0.1);
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-full: 9999px;
+            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--sb-warm-cream);
+            color: var(--sb-text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navbar / Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(14px);
+            background: rgba(255, 255, 255, 0.88);
+            border-bottom: 1px solid rgba(0, 98, 65, 0.08);
+            padding: 16px 28px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-circle {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--sb-green), var(--sb-dark-green));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .logo-circle svg {
+            width: 26px;
+            height: 26px;
+            fill: currentColor;
+        }
+
+        .brand-name {
+            font-size: 1.25rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: var(--sb-green);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-link {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--sb-text-muted);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--sb-green);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: var(--sb-green);
+            color: var(--sb-white);
+            padding: 14px 28px;
+            border-radius: var(--radius-full);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            border: 2px solid transparent;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0, 98, 65, 0.25);
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            background-color: #004d33;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(0, 98, 65, 0.35);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--sb-dark-green);
+            border-color: rgba(0, 98, 65, 0.2);
+            box-shadow: none;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--sb-light-green);
+            border-color: var(--sb-green);
+            color: var(--sb-green);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-sm {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Container & Section Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto 50px auto;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background-color: var(--sb-light-green);
+            color: var(--sb-green);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            padding: 6px 16px;
+            border-radius: var(--radius-full);
+            margin-bottom: 16px;
+            border: 1px solid rgba(0, 98, 65, 0.15);
+        }
+
+        .section-title {
+            font-size: 2.35rem;
+            font-weight: 800;
+            color: var(--sb-dark-green);
+            line-height: 1.25;
+            margin-bottom: 16px;
+        }
+
+        .section-desc {
+            font-size: 1.1rem;
+            color: var(--sb-text-muted);
+        }
+
+        /* 1. Hero Section */
+        #hero {
+            padding: 60px 0 90px;
+            background: radial-gradient(circle at 10% 20%, rgba(212, 233, 226, 0.7) 0%, rgba(247, 245, 240, 0.95) 80%);
+            border-bottom: 1px solid rgba(0, 98, 65, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            align-items: center;
+            gap: 48px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.15;
+            color: var(--sb-dark-green);
+            margin-bottom: 22px;
+        }
+
+        .hero-title span {
+            color: var(--sb-green);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-desc {
+            font-size: 1.25rem;
+            color: var(--sb-text-muted);
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .hero-desc strong {
+            color: var(--sb-dark-green);
+            font-weight: 700;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 36px;
+        }
+
+        .hero-trust-bar {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(0, 98, 65, 0.12);
+        }
+
+        .avatars-stack {
+            display: flex;
+        }
+
+        .avatar {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 2px solid var(--sb-white);
+            margin-left: -10px;
+            background: #cbd5e1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .avatar:first-child {
+            margin-left: 0;
+        }
+
+        .avatar-1 {
+            background: #006241;
+        }
+
+        .avatar-2 {
+            background: #cba258;
+        }
+
+        .avatar-3 {
+            background: #1e3932;
+        }
+
+        .trust-text {
+            font-size: 0.9rem;
+            color: var(--sb-text-muted);
+        }
+
+        .trust-text strong {
+            color: var(--sb-dark-green);
+        }
+
+        /* Hero Image Showcase */
+        .hero-media-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-card-frame {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            border: 4px solid var(--sb-white);
+            transform: rotate(-1.5deg);
+            transition: var(--transition);
+        }
+
+        .hero-card-frame:hover {
+            transform: rotate(0deg) scale(1.02);
+        }
+
+        .hero-card-frame img {
+            width: 100%;
+            height: auto;
+            max-width: 440px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .float-badge {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            padding: 14px 20px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border: 1px solid rgba(0, 98, 65, 0.1);
+            animation: floating 4s ease-in-out infinite alternate;
+        }
+
+        .float-badge-top {
+            top: 20px;
+            right: -20px;
+        }
+
+        .float-badge-bottom {
+            bottom: 25px;
+            left: -20px;
+            animation-delay: 2s;
+        }
+
+        .badge-icon-box {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--sb-light-green);
+            color: var(--sb-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: 800;
+        }
+
+        .badge-content h4 {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--sb-dark-green);
+        }
+
+        .badge-content p {
+            font-size: 0.8rem;
+            color: var(--sb-text-muted);
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translateY(0px);
+            }
+
+            100% {
+                transform: translateY(-8px);
+            }
+        }
+
+        /* 2. Cómo Funciona */
+        #como-funciona {
+            background-color: var(--sb-white);
+        }
+
+        .pasos-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            position: relative;
+        }
+
+        .paso-card {
+            background: var(--sb-soft-gray);
+            border-radius: var(--radius-lg);
+            padding: 40px 30px;
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .paso-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+            background: var(--sb-white);
+            border-color: rgba(0, 98, 65, 0.2);
+        }
+
+        .paso-numero {
+            width: 54px;
+            height: 54px;
+            background: linear-gradient(135deg, var(--sb-green), var(--sb-dark-green));
+            color: var(--sb-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px auto;
+            font-size: 1.4rem;
+            font-weight: 800;
+            box-shadow: 0 8px 16px rgba(0, 98, 65, 0.25);
+        }
+
+        .paso-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--sb-dark-green);
+            margin-bottom: 12px;
+        }
+
+        .paso-card p {
+            color: var(--sb-text-muted);
+            font-size: 0.98rem;
+        }
+
+        /* 3. Interactive Impact Calculator */
+        #calculadora {
+            background: linear-gradient(180deg, var(--sb-warm-cream) 0%, var(--sb-light-green) 100%);
+            border-radius: var(--radius-lg);
+            margin: 40px auto;
+            border: 1px solid rgba(0, 98, 65, 0.1);
+        }
+
+        .calc-wrapper {
+            background: var(--sb-white);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-md);
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .slider-box {
+            margin: 25px 0 35px;
+            text-align: center;
+        }
+
+        .slider-label {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--sb-dark-green);
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .slider-value-display {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--sb-green);
+            margin-bottom: 15px;
+        }
+
+        input[type=range] {
+            width: 100%;
+            max-width: 500px;
+            height: 8px;
+            border-radius: 5px;
+            background: #d8e5df;
+            outline: none;
+            -webkit-appearance: none;
+            accent-color: var(--sb-green);
+            cursor: pointer;
+        }
+
+        .calc-metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .metric-card {
+            background: var(--sb-soft-gray);
+            padding: 20px 15px;
+            border-radius: var(--radius-md);
+        }
+
+        .metric-card .metric-number {
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: var(--sb-green);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .metric-card .metric-desc {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--sb-text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* 4. Evidencia / Social Proof */
+        #evidencia {
+            background: var(--sb-deep-forest);
+            color: var(--sb-white);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #evidencia::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 98, 65, 0.45) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        #evidencia .section-title {
+            color: var(--sb-white);
+        }
+
+        #evidencia .section-desc {
+            color: #b3c9c0;
+        }
+
+        .stats-highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 45px;
+        }
+
+        .stat-box {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 35px 25px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .stat-box:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--sb-accent-gold);
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #d8e5df;
+            font-weight: 500;
+        }
+
+        /* 5. FAQ Accordion */
+        #faq {
+            background-color: var(--sb-white);
+        }
+
+        .faq-accordion {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .faq-item {
+            background: var(--sb-soft-gray);
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--sb-green);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item[open] {
+            background: var(--sb-light-green);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-summary {
+            padding: 22px 24px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--sb-dark-green);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            user-select: none;
+        }
+
+        .faq-summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-icon {
+            font-size: 1.4rem;
+            color: var(--sb-green);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item[open] .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-content {
+            padding: 0 24px 22px 24px;
+            color: var(--sb-text-muted);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* 6. Cierre CTA */
+        #cierre {
+            background: linear-gradient(135deg, var(--sb-light-green) 0%, #cce5da 100%);
+            border-radius: var(--radius-lg);
+            margin: 0 24px 80px 24px;
+            padding: 70px 30px;
+            text-align: center;
+            border: 1px solid rgba(0, 98, 65, 0.15);
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #cierre .cta-title {
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: var(--sb-dark-green);
+            margin-bottom: 16px;
+        }
+
+        #cierre p {
+            font-size: 1.2rem;
+            color: var(--sb-text-muted);
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+
+        /* Modal Cupón Simulator */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(6px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            animation: fadeIn 0.25s ease-out;
+        }
+
+        .coupon-modal {
+            background: var(--sb-white);
+            max-width: 480px;
+            width: 100%;
+            border-radius: var(--radius-lg);
+            padding: 35px;
+            position: relative;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+        }
+
+        .close-modal-btn {
+            position: absolute;
+            top: 15px;
+            right: 18px;
+            background: none;
+            border: none;
+            font-size: 1.6rem;
+            color: #888;
+            cursor: pointer;
+        }
+
+        .coupon-ticket {
+            background: #fbf9f4;
+            border: 2px dashed var(--sb-green);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 20px 0;
+        }
+
+        .coupon-code {
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: var(--sb-green);
+            background: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--sb-dark-green);
+            color: #b0c4bc;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        footer a {
+            color: var(--sb-white);
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-title {
+                font-size: 2.6rem;
+            }
+
+            .hero-cta-group {
+                justify-content: center;
+            }
+
+            .hero-trust-bar {
+                justify-content: center;
+            }
+
+            .pasos-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-highlight-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .calc-metrics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .float-badge {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-title {
+                font-size: 2.1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .nav-links .nav-link {
+                display: none;
+            }
+
+            #cierre {
+                margin: 0 12px 60px 12px;
+                padding: 45px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header / Navegación -->
+    <header>
+        <div class="nav-container">
+            <a href="#hero" class="brand-logo" aria-label="Starbucks Inicio">
+                <div class="logo-circle">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
+                    </svg>
+                </div>
+                <span class="brand-name">STARBUCKS</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#como-funciona" class="nav-link">¿Cómo funciona?</a>
+                <a href="#calculadora" class="nav-link">Tu Impacto</a>
+                <a href="#faq" class="nav-link">Preguntas</a>
+                <button type="button" class="btn btn-sm trigger-coupon-modal">Obtener Cupón</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero: Propuesta de valor e incentivo -->
+        <section id="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="badge">
+                            <span>🌱</span> Compromiso con el Planeta
+                        </div>
+                        <h1 class="hero-title">
+                            Salva el planeta hoy,<br>
+                            <span>USA TU VASO REUTILIZABLE</span>
+                        </h1>
+                        <p class="hero-desc">
+                            Ayuda al medio ambiente y obtén <strong>15% de descuento</strong> en tu bebida favorita cada
+                            vez que traigas tu propio vaso o termo.
+                        </p>
+                        <div class="hero-cta-group">
+                            <a href="#obtener-cupon" id="cta-principal" class="btn trigger-coupon-modal">
+                                <span>Descarga tu cupón de descuento</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                            <a href="#como-funciona" class="btn btn-secondary">
+                                Ver cómo funciona
+                            </a>
+                        </div>
+                        <div class="hero-trust-bar">
+                            <div class="avatars-stack">
+                                <div class="avatar avatar-1">✓</div>
+                                <div class="avatar avatar-2">★</div>
+                                <div class="avatar avatar-3">☕</div>
+                            </div>
+                            <p class="trust-text">
+                                Más de <strong>250,000 baristas y clientes</strong> ya se sumaron al cambio.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="hero-media-wrapper">
+                        <div class="hero-card-frame">
+                            <img src="starbucks_tumbler.jpg" alt="Vaso reutilizable Starbucks en barra de mármol"
+                                loading="eager">
+                        </div>
+
+                        <div class="float-badge float-badge-top">
+                            <div class="badge-icon-box">15%</div>
+                            <div class="badge-content">
+                                <h4>Descuento Directo</h4>
+                                <p>En caja con tu vaso</p>
+                            </div>
+                        </div>
+
+                        <div class="float-badge float-badge-bottom">
+                            <div class="badge-icon-box">♻️</div>
+                            <div class="badge-content">
+                                <h4>0% Residuos</h4>
+                                <p>Cero vasos de un solo uso</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Cómo Funciona: Reduciendo la fricción operativa -->
+        <section id="como-funciona">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge">Paso a Paso</div>
+                    <h2 class="section-title">¿Cómo funciona? Es muy simple</h2>
+                    <p class="section-desc">Sigue estos tres sencillos pasos para disfrutar tu café favorito mientras
+                        cuidas el planeta.</p>
+                </div>
+
+                <div class="pasos-grid">
+                    <div class="paso-card">
+                        <div class="paso-numero">1</div>
+                        <h3>Trae tu vaso limpio</h3>
+                        <p>Puede ser un tumbler Starbucks o cualquier otro termo o taza reutilizable que traigas limpio
+                            desde casa.</p>
+                    </div>
+
+                    <div class="paso-card">
+                        <div class="paso-numero">2</div>
+                        <h3>Pide tu bebida</h3>
+                        <p>Entrégale el vaso a tu barista al hacer tu pedido en la caja o en drive-thru e indícale tu
+                            tamaño habitual.</p>
+                    </div>
+
+                    <div class="paso-card">
+                        <div class="paso-numero">3</div>
+                        <h3>Disfruta tu descuento</h3>
+                        <p>El barista aplicará un 15% de descuento inmediato sobre el total de tu bebida preparada en
+                            barra.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Calculadora de Impacto Interactivo -->
+        <section id="calculadora" class="container">
+            <div class="calc-wrapper">
+                <div class="section-header" style="margin-bottom: 20px;">
+                    <div class="badge">Calculadora Verde</div>
+                    <h2 class="section-title" style="font-size: 2rem;">Calcula tu impacto anual</h2>
+                    <p class="section-desc">Descubre cuánto plástico ahorras y cuánto dinero ahorras llevando tu vaso.
+                    </p>
+                </div>
+
+                <div class="slider-box">
+                    <label for="coffee-slider" class="slider-label">¿Cuántos cafés compras por semana?</label>
+                    <div class="slider-value-display"><span id="coffee-count">4</span> cafés / semana</div>
+                    <input type="range" id="coffee-slider" min="1" max="15" value="4" step="1">
+                </div>
+
+                <div class="calc-metrics-grid">
+                    <div class="metric-card">
+                        <span class="metric-number" id="cups-saved">208</span>
+                        <span class="metric-desc">Vasos desechables ahorrados / año</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-number" id="money-saved">$37,440</span>
+                        <span class="metric-desc">Ahorro anual estimado (15%)</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-number" id="co2-saved">5.2 kg</span>
+                        <span class="metric-desc">CO2 evitado en la atmósfera</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Evidencia: Prueba social y métricas -->
+        <section id="evidencia">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge"
+                        style="background: rgba(255,255,255,0.12); color: #cba258; border-color: rgba(203,162,88,0.3);">
+                        Impacto Colectivo
+                    </div>
+                    <h2 class="section-title">El cambio lo hacemos juntos</h2>
+                    <p class="section-desc">
+                        Cada café que tomas con tu vaso reutilizable evita que toneladas de residuos terminen en
+                        vertederos y océanos.
+                    </p>
+                </div>
+
+                <div class="stats-highlight-grid">
+                    <div class="stat-box">
+                        <div class="stat-number">+250,000</div>
+                        <div class="stat-label">Vasos desechables ahorrados este año en nuestras tiendas</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">15% OFF</div>
+                        <div class="stat-label">Descuento garantizado en bebidas frías, calientes o frappuccinos</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Aceptamos vasos y termos de cualquier marca limpia</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. FAQ: Resolviendo objeciones -->
+        <section id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge">Dudas Habituales</div>
+                    <h2 class="section-title">Preguntas Frecuentes</h2>
+                    <p class="section-desc">Todo lo que necesitas saber antes de pedir tu bebida con vaso reutilizable.
+                    </p>
+                </div>
+
+                <div class="faq-accordion">
+                    <details class="faq-item" open>
+                        <summary class="faq-summary">
+                            <span>¿Aceptan vasos que no sean de Starbucks?</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-content">
+                            <p>¡Sí! Aceptamos cualquier marca de vaso, termo o taza reutilizable siempre y cuando esté
+                                limpio y tenga la capacidad adecuada para el tamaño de tu bebida (Alto, Grande o Venti).
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-summary">
+                            <span>¿El vaso tiene que venir limpio de casa?</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-content">
+                            <p>Sí. Por protocolos de higiene y bioseguridad alimentaria para proteger tanto a nuestros
+                                baristas como a todos los clientes, únicamente podemos servir en recipientes que vengan
+                                previamente lavados.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-summary">
+                            <span>¿Aplica para bebidas frías y calientes?</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-content">
+                            <p>¡Por supuesto! El descuento del 15% aplica para cafés calientes, lattes fríos, Cold Brew,
+                                tés y Frappuccinos preparados en barra.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-summary">
+                            <span>¿Es acumulable con Starbucks Rewards?</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-content">
+                            <p>Sí, acumulas tus estrellas normales en tu cuenta Starbucks Rewards por el monto neto
+                                pagado y además recibes el descuento inmediato.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Cierre: Conversión final -->
+        <section id="cierre">
+            <div class="container">
+                <h2 class="cta-title">¿Listo para hacer la diferencia?</h2>
+                <p>Empieza a usar tu vaso hoy mismo, ahorra dinero en cada visita y sé parte activa de un futuro
+                    sustentable.</p>
+                <button type="button" class="cta-principal btn trigger-coupon-modal">
+                    <span>Descarga tu cupón de descuento</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Cupón Digital -->
+    <div class="modal-overlay" id="couponModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="coupon-modal">
+            <button class="close-modal-btn" id="closeModal" aria-label="Cerrar ventana">&times;</button>
+            <div class="badge">Cupón Activo</div>
+            <h3 id="modalTitle" style="color: var(--sb-dark-green); font-size: 1.6rem; margin-top: 8px;">¡Tu 15% de
+                Descuento!</h3>
+            <p style="color: var(--sb-text-muted); font-size: 0.95rem; margin-top: 6px;">
+                Muestra este código o indícalo a tu barista en caja junto a tu vaso limpio.
+            </p>
+
+            <div class="coupon-ticket">
+                <div style="font-weight: 700; color: var(--sb-text-muted); font-size: 0.85rem;">CÓDIGO DIGITAL EXCLUSIVO
+                </div>
+                <div class="coupon-code">ECO-VASO-15</div>
+                <div style="margin-top: 8px; font-size: 0.8rem; color: #777;">Válido en tiendas Starbucks participantes
+                </div>
+            </div>
+
+            <button type="button" class="btn" style="width: 100%;" id="copyCodeBtn">
+                Copiar Código al Portapapeles
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p style="margin-bottom: 8px;">&copy; 2026 Starbucks Coffee Company. Todos los derechos reservados.</p>
+            <p style="font-size: 0.8rem;">Campaña de sustentabilidad y reducción de huella plástica orientada a la
+                comunidad.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts de interactividad y Google Analytics -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Analytics para tracking de botones CTA
+            const botonesCTA = document.querySelectorAll('#cta-principal, .cta-principal, .trigger-coupon-modal');
+
+            botonesCTA.forEach(function (boton) {
+                boton.addEventListener('click', function (e) {
+                    const seccion = this.closest('section');
+                    const seccionId = seccion ? seccion.id : 'header';
+
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'clic_cta_principal', {
+                            'ubicacion': seccionId,
+                            'elemento': this.innerText.trim()
+                        });
+                    }
+                });
+            });
+
+            // Modal Cupón
+            const modal = document.getElementById('couponModal');
+            const closeModal = document.getElementById('closeModal');
+            const triggers = document.querySelectorAll('.trigger-coupon-modal');
+            const copyBtn = document.getElementById('copyCodeBtn');
+
+            triggers.forEach(btn => {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    modal.classList.add('active');
+                });
+            });
+
+            closeModal.addEventListener('click', () => modal.classList.remove('active'));
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) modal.classList.remove('active');
+            });
+
+            copyBtn.addEventListener('click', () => {
+                navigator.clipboard.writeText('ECO-VASO-15').then(() => {
+                    copyBtn.innerText = '¡Copiado con éxito!';
+                    copyBtn.style.backgroundColor = '#1e3932';
+                    setTimeout(() => {
+                        copyBtn.innerText = 'Copiar Código al Portapapeles';
+                        copyBtn.style.backgroundColor = '';
+                    }, 2500);
+                });
+            });
+
+            // Calculadora de Impacto Interactivo
+            const slider = document.getElementById('coffee-slider');
+            const countDisplay = document.getElementById('coffee-count');
+            const cupsSaved = document.getElementById('cups-saved');
+            const moneySaved = document.getElementById('money-saved');
+            const co2Saved = document.getElementById('co2-saved');
+
+            const avgCoffeePrice = 6000; // precio promedio estimado para 15% de descuento (~$900 por café)
+            const discountPerCoffee = avgCoffeePrice * 0.15;
+
+            function updateCalculator() {
+                const cupsPerWeek = parseInt(slider.value, 10);
+                countDisplay.textContent = cupsPerWeek;
+
+                const annualCups = cupsPerWeek * 52;
+                const annualMoney = Math.round(annualCups * discountPerCoffee);
+                const annualCo2 = (annualCups * 0.025).toFixed(1); // aprox 25g de CO2 por vaso desechable
+
+                cupsSaved.textContent = annualCups.toLocaleString('es-CL');
+                moneySaved.textContent = '$' + annualMoney.toLocaleString('es-CL');
+                co2Saved.textContent = annualCo2 + ' kg';
+            }
+
+            slider.addEventListener('input', updateCalculator);
+            updateCalculator();
+        });
+    </script>
+</body>
+
+</html>
